@@ -1,0 +1,12 @@
+apiVersion: networkservicemesh.io/v1
+kind: NetworkServiceEndpoint
+metadata:
+  name: cnf-nat-example-endpoint
+spec:
+  networkService: cnf-nat-example
+  interfaceType: MEM_INTERFACE
+  interfaceName: memif0
+  labels:
+    app: nat44
+  ipAddresses:
+    - "192.168.100.1/24"
